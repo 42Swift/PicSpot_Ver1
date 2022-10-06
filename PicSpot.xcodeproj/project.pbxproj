@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		BF51E9CD28ED316C0011952E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9CC28ED316C0011952E /* AppDelegate.swift */; };
 		BF51E9CF28ED316C0011952E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9CE28ED316C0011952E /* SceneDelegate.swift */; };
-		BF51E9D128ED316C0011952E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9D028ED316C0011952E /* ViewController.swift */; };
+		BF51E9D128ED316C0011952E /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9D028ED316C0011952E /* MainTabBarViewController.swift */; };
 		BF51E9D428ED316C0011952E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF51E9D228ED316C0011952E /* Main.storyboard */; };
 		BF51E9D628ED316D0011952E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF51E9D528ED316D0011952E /* Assets.xcassets */; };
 		BF51E9D928ED316D0011952E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF51E9D728ED316D0011952E /* LaunchScreen.storyboard */; };
+		BF51E9F028EE86CE0011952E /* SpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9EF28EE86CE0011952E /* SpotViewController.swift */; };
+		BF51E9F228EE86E30011952E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9F128EE86E30011952E /* MapViewController.swift */; };
+		BF51E9F428EE86F90011952E /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9F328EE86F90011952E /* ClubViewController.swift */; };
+		BF51E9F628EE87130011952E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9F528EE87130011952E /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BF51E9C928ED316C0011952E /* PicSpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicSpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF51E9CC28ED316C0011952E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF51E9CE28ED316C0011952E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BF51E9D028ED316C0011952E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF51E9D028ED316C0011952E /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		BF51E9D328ED316C0011952E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF51E9D528ED316D0011952E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF51E9D828ED316D0011952E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF51E9DA28ED316D0011952E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF51E9EF28EE86CE0011952E /* SpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotViewController.swift; sourceTree = "<group>"; };
+		BF51E9F128EE86E30011952E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BF51E9F328EE86F90011952E /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
+		BF51E9F528EE87130011952E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,25 @@
 			children = (
 				BF51E9CC28ED316C0011952E /* AppDelegate.swift */,
 				BF51E9CE28ED316C0011952E /* SceneDelegate.swift */,
-				BF51E9D028ED316C0011952E /* ViewController.swift */,
+				BF51E9D028ED316C0011952E /* MainTabBarViewController.swift */,
+				BF51E9EE28EE86BD0011952E /* Controllers */,
 				BF51E9D228ED316C0011952E /* Main.storyboard */,
 				BF51E9D528ED316D0011952E /* Assets.xcassets */,
 				BF51E9D728ED316D0011952E /* LaunchScreen.storyboard */,
 				BF51E9DA28ED316D0011952E /* Info.plist */,
 			);
 			path = PicSpot;
+			sourceTree = "<group>";
+		};
+		BF51E9EE28EE86BD0011952E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF51E9EF28EE86CE0011952E /* SpotViewController.swift */,
+				BF51E9F128EE86E30011952E /* MapViewController.swift */,
+				BF51E9F328EE86F90011952E /* ClubViewController.swift */,
+				BF51E9F528EE87130011952E /* ProfileViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,8 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF51E9D128ED316C0011952E /* ViewController.swift in Sources */,
+				BF51E9F028EE86CE0011952E /* SpotViewController.swift in Sources */,
+				BF51E9D128ED316C0011952E /* MainTabBarViewController.swift in Sources */,
+				BF51E9F428EE86F90011952E /* ClubViewController.swift in Sources */,
 				BF51E9CD28ED316C0011952E /* AppDelegate.swift in Sources */,
+				BF51E9F628EE87130011952E /* ProfileViewController.swift in Sources */,
+				BF51E9F228EE86E30011952E /* MapViewController.swift in Sources */,
 				BF51E9CF28ED316C0011952E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
