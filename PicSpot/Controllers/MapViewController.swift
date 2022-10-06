@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import NMapsMap
 
 class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemYellow
+        let mapView = NMFNaverMapView(frame: view.frame)
+        view.addSubview(mapView)
     }
 
 }
