@@ -22,6 +22,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.rootViewController = MainTabBarViewController()
         window?.makeKeyAndVisible()
+        // 라이트모드로 고정
+        // 다크모드에서는 상단 상태바의 글씨가 흰색으로 표시되어 Naver 지도 위에서 글씨가 안보이는 현상이 있음
+        window?.overrideUserInterfaceStyle = .light
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
