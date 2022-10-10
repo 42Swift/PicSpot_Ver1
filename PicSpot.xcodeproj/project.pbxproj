@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		909D99C228F3DC8600E0D1C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 909D99C128F3DC8600E0D1C0 /* GoogleService-Info.plist */; };
 		BF51E9CD28ED316C0011952E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9CC28ED316C0011952E /* AppDelegate.swift */; };
 		BF51E9CF28ED316C0011952E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9CE28ED316C0011952E /* SceneDelegate.swift */; };
 		BF51E9D128ED316C0011952E /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9D028ED316C0011952E /* MainTabBarViewController.swift */; };
@@ -24,6 +25,7 @@
 		02069BD991AD8AA8F6D3B609 /* Pods-PicSpot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicSpot.debug.xcconfig"; path = "Target Support Files/Pods-PicSpot/Pods-PicSpot.debug.xcconfig"; sourceTree = "<group>"; };
 		4A6A352BE6C31CCF44CC91AC /* Pods-PicSpot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicSpot.release.xcconfig"; path = "Target Support Files/Pods-PicSpot/Pods-PicSpot.release.xcconfig"; sourceTree = "<group>"; };
 		5CEDD1883D766EAAE5CA99E8 /* Pods_PicSpot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicSpot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		909D99C128F3DC8600E0D1C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF51E9C928ED316C0011952E /* PicSpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicSpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF51E9CC28ED316C0011952E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF51E9CE28ED316C0011952E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +58,6 @@
 				02069BD991AD8AA8F6D3B609 /* Pods-PicSpot.debug.xcconfig */,
 				4A6A352BE6C31CCF44CC91AC /* Pods-PicSpot.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +89,7 @@
 				BF51E9D228ED316C0011952E /* Main.storyboard */,
 				BF51E9D528ED316D0011952E /* Assets.xcassets */,
 				BF51E9D728ED316D0011952E /* LaunchScreen.storyboard */,
+				909D99C128F3DC8600E0D1C0 /* GoogleService-Info.plist */,
 				BF51E9DA28ED316D0011952E /* Info.plist */,
 			);
 			path = PicSpot;
@@ -174,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF51E9D928ED316D0011952E /* LaunchScreen.storyboard in Resources */,
+				909D99C228F3DC8600E0D1C0 /* GoogleService-Info.plist in Resources */,
 				BF51E9D628ED316D0011952E /* Assets.xcassets in Resources */,
 				BF51E9D428ED316C0011952E /* Main.storyboard in Resources */,
 			);
