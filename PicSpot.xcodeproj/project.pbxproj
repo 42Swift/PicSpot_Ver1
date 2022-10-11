@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		909D99C228F3DC8600E0D1C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 909D99C128F3DC8600E0D1C0 /* GoogleService-Info.plist */; };
+		BF51E5CC28F52EDD002609F7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BF51E5CB28F52EDD002609F7 /* FirebaseStorage */; };
+		BF51E5CF28F52F7D002609F7 /* NMapsMap in Frameworks */ = {isa = PBXBuildFile; productRef = BF51E5CE28F52F7D002609F7 /* NMapsMap */; };
 		BF51E9CD28ED316C0011952E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9CC28ED316C0011952E /* AppDelegate.swift */; };
 		BF51E9CF28ED316C0011952E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9CE28ED316C0011952E /* SceneDelegate.swift */; };
 		BF51E9D128ED316C0011952E /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9D028ED316C0011952E /* MainTabBarViewController.swift */; };
@@ -18,13 +20,9 @@
 		BF51E9F228EE86E30011952E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9F128EE86E30011952E /* MapViewController.swift */; };
 		BF51E9F428EE86F90011952E /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9F328EE86F90011952E /* ClubViewController.swift */; };
 		BF51E9F628EE87130011952E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9F528EE87130011952E /* ProfileViewController.swift */; };
-		D4B0BC79A0E28222329957B4 /* Pods_PicSpot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CEDD1883D766EAAE5CA99E8 /* Pods_PicSpot.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		02069BD991AD8AA8F6D3B609 /* Pods-PicSpot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicSpot.debug.xcconfig"; path = "Target Support Files/Pods-PicSpot/Pods-PicSpot.debug.xcconfig"; sourceTree = "<group>"; };
-		4A6A352BE6C31CCF44CC91AC /* Pods-PicSpot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicSpot.release.xcconfig"; path = "Target Support Files/Pods-PicSpot/Pods-PicSpot.release.xcconfig"; sourceTree = "<group>"; };
-		5CEDD1883D766EAAE5CA99E8 /* Pods_PicSpot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicSpot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		909D99C128F3DC8600E0D1C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF51E9C928ED316C0011952E /* PicSpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicSpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF51E9CC28ED316C0011952E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,29 +43,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4B0BC79A0E28222329957B4 /* Pods_PicSpot.framework in Frameworks */,
+				BF51E5CC28F52EDD002609F7 /* FirebaseStorage in Frameworks */,
+				BF51E5CF28F52F7D002609F7 /* NMapsMap in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A64BE8EF6704DFD4961D86AA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				02069BD991AD8AA8F6D3B609 /* Pods-PicSpot.debug.xcconfig */,
-				4A6A352BE6C31CCF44CC91AC /* Pods-PicSpot.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		BF51E9C028ED316C0011952E = {
 			isa = PBXGroup;
 			children = (
 				BF51E9CB28ED316C0011952E /* PicSpot */,
 				BF51E9CA28ED316C0011952E /* Products */,
-				A64BE8EF6704DFD4961D86AA /* Pods */,
-				DE74DCD3A84DD4F778A8CBE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,14 +94,6 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		DE74DCD3A84DD4F778A8CBE3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5CEDD1883D766EAAE5CA99E8 /* Pods_PicSpot.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,18 +101,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF51E9DD28ED316D0011952E /* Build configuration list for PBXNativeTarget "PicSpot" */;
 			buildPhases = (
-				E4EEE06B847F58ABD061C9B5 /* [CP] Check Pods Manifest.lock */,
 				BF51E9E228ED8D150011952E /* ShellScript */,
 				BF51E9C528ED316C0011952E /* Sources */,
 				BF51E9C628ED316C0011952E /* Frameworks */,
 				BF51E9C728ED316C0011952E /* Resources */,
-				DD222C35BF906720F94FB569 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = PicSpot;
+			packageProductDependencies = (
+				BF51E5CB28F52EDD002609F7 /* FirebaseStorage */,
+				BF51E5CE28F52F7D002609F7 /* NMapsMap */,
+			);
 			productName = PicSpot;
 			productReference = BF51E9C928ED316C0011952E /* PicSpot.app */;
 			productType = "com.apple.product-type.application";
@@ -161,6 +143,10 @@
 				Base,
 			);
 			mainGroup = BF51E9C028ED316C0011952E;
+			packageReferences = (
+				BF51E5CA28F52EDD002609F7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				BF51E5CD28F52F7D002609F7 /* XCRemoteSwiftPackageReference "NMapsMap-SPM" */,
+			);
 			productRefGroup = BF51E9CA28ED316C0011952E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -202,45 +188,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		DD222C35BF906720F94FB569 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PicSpot/Pods-PicSpot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PicSpot/Pods-PicSpot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PicSpot/Pods-PicSpot-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E4EEE06B847F58ABD061C9B5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PicSpot-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -397,7 +344,6 @@
 		};
 		BF51E9DE28ED316D0011952E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02069BD991AD8AA8F6D3B609 /* Pods-PicSpot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -426,7 +372,6 @@
 		};
 		BF51E9DF28ED316D0011952E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A6A352BE6C31CCF44CC91AC /* Pods-PicSpot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,6 +420,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BF51E5CA28F52EDD002609F7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		BF51E5CD28F52F7D002609F7 /* XCRemoteSwiftPackageReference "NMapsMap-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jaemyeong/NMapsMap-SPM";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BF51E5CB28F52EDD002609F7 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF51E5CA28F52EDD002609F7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		BF51E5CE28F52F7D002609F7 /* NMapsMap */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF51E5CD28F52F7D002609F7 /* XCRemoteSwiftPackageReference "NMapsMap-SPM" */;
+			productName = NMapsMap;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BF51E9C128ED316C0011952E /* Project object */;
 }
