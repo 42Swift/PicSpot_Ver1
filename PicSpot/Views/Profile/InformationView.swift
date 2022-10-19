@@ -7,32 +7,9 @@
 
 import UIKit
 
-class InformationView: UIViewController {
+class InformationView: UICollectionReusableView {
 
     // MARK: - Properties
-
-    lazy var containerView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .mainGray
-
-        view.addSubview(profilePicture)
-        profilePicture.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        profilePicture.anchor(left: view.leftAnchor, paddingLeft: constant.btwLeftPic,
-                              width: constant.picSize, height: constant.picSize)
-        profilePicture.layer.cornerRadius = constant.picSize / 2
-
-        view.addSubview(name)
-        name.centerYAnchor.constraint(equalTo: profilePicture.centerYAnchor).isActive = true
-        name.anchor(left: profilePicture.rightAnchor, paddingLeft: constant.btwPicName)
-        name.font = UIFont.systemFont(ofSize: constant.nameSize)
-
-        view.addSubview(snsMark)
-        snsMark.centerYAnchor.constraint(equalTo: profilePicture.centerYAnchor).isActive = true
-        snsMark.anchor(left: name.rightAnchor, paddingLeft: constant.btwNameMark,
-                       width: constant.markSize, height: constant.markSize)
-
-        return view
-    }()
 
     lazy var profilePicture: UIImageView = {
         let imageView = UIImageView()
@@ -54,7 +31,7 @@ class InformationView: UIViewController {
 
     lazy var snsMark: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(named: "camera")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        button.setImage(UIImage(named: "camera-1024")?.withRenderingMode(.alwaysOriginal), for: .normal)
         button.addTarget(self, action: #selector(linkToSNS), for: .touchUpInside)
         return button
     }()
@@ -63,24 +40,30 @@ class InformationView: UIViewController {
 
     // MARK: LifeCycle
 
-    init() {
-        super.init(nibName: nil, bundle: nil)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .mainGray
+
+        addSubview(profilePicture)
+        profilePicture.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        profilePicture.anchor(left: leftAnchor, paddingLeft: constant.btwLeftPic,
+                              width: constant.picSize, height: constant.picSize)
+        profilePicture.layer.cornerRadius = constant.picSize / 2
+
+        addSubview(name)
+        name.centerYAnchor.constraint(equalTo: profilePicture.centerYAnchor).isActive = true
+        name.anchor(left: profilePicture.rightAnchor, paddingLeft: constant.btwPicName)
+        name.font = UIFont.systemFont(ofSize: constant.nameSize)
+
+        addSubview(snsMark)
+        snsMark.centerYAnchor.constraint(equalTo: profilePicture.centerYAnchor).isActive = true
+        snsMark.anchor(left: name.rightAnchor, paddingLeft: constant.btwNameMark,
+                       width: constant.markSize, height: constant.markSize)
 
     }
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        view.backgroundColor = .mainGray
-        view.addSubview(containerView)
-        containerView.anchor(top: view.topAnchor, left: view.leftAnchor,
-                             right: view.rightAnchor, height: view.frame.height)
-    }
-
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
     }
 
     // MARK: - Selectors
@@ -90,4 +73,3 @@ class InformationView: UIViewController {
     }
 
 }
-

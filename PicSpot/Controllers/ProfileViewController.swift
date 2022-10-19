@@ -18,17 +18,10 @@ class ProfileViewController: UIViewController {
         return button
     }()
 
-    lazy var informationView: InformationView = {
-        let information = InformationView()
-        information.view.frame = CGRect(x: 0, y: 0,
-                                        width: constants.screenWidth, height: constants.informationHeight)
-        return information
-    }()
-
-    lazy var pictureView: MyPictureView = {
-        let picture = MyPictureView()
-        picture.view.frame = CGRect(x: 0, y: constants.informationHeight, width: constants.screenWidth,
-                                    height: constants.screenHeight -  constants.informationHeight)
+    lazy var pictureView: MyPictureController = {
+        let picture = MyPictureController(collectionViewLayout: UICollectionViewFlowLayout())
+        picture.view.frame = CGRect(x: 0, y: 0, width: constants.screenWidth,
+                                    height: constants.screenHeight)
         return picture
     }()
 
@@ -44,7 +37,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .mainGray
 
-        view.addSubview(informationView.view)
         view.addSubview(pictureView.view)
 
         navigationItem.rightBarButtonItem = alert
