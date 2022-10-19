@@ -11,7 +11,6 @@ class MainTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // 뷰컨트롤러 연결
         let vc1 = UINavigationController(rootViewController: SpotViewController())
         let vc2 = UINavigationController(rootViewController: MapViewController())
@@ -37,6 +36,8 @@ class MainTabBarViewController: UITabBarController {
 
         // 탭바 아이템 표시
         setViewControllers([vc1, vc2, vc3, vc4], animated: true)
+        self.selectedIndex = 3
+
     }
 
 }
