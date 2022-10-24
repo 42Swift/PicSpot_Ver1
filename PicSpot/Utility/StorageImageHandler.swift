@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseStorage
 
-class StorageImageController: UIViewController {
+class StorageImageHandler {
     let storage = Storage.storage()
     // 파일 업로드, 다운로드, 삭제, 메타데이터 가져오기 또는 업데이트를 하려면 참조를 만듭니다
     // 참조는 클라우드의 파일을 가리키는 포인터로 생각하면 됩니다
