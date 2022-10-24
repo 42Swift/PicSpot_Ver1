@@ -35,19 +35,6 @@ class StorageImageHandler {
                 return
             }
         }
-        /* 업로드 상태를 모니터링 하는 법
-         // Start uploading a file
-         let uploadTask = storageRef.putFile(from: localFile)
-
-         // Pause the upload
-         uploadTask.pause()
-
-         // Resume the upload
-         uploadTask.resume()
-
-         // Cancel the upload
-         uploadTask.cancel()
-         */
     }
     func downloadImage(_ imageView: UIImageView, _ imageData: ImageWithName) {
         guard imageData.imageName != nil else { print("No Image name");return }

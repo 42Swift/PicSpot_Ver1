@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		909D99C228F3DC8600E0D1C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 909D99C128F3DC8600E0D1C0 /* GoogleService-Info.plist */; };
 		90A1AF1929064C0600995909 /* StorageModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1AF1829064C0600995909 /* StorageModule.swift */; };
-		90A1AF1C29064C5C00995909 /* StorageImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1AF1B29064C5C00995909 /* StorageImageHandler.swift */; };
 		90A1AF2829065E0A00995909 /* StorageImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1AF2729065E0A00995909 /* StorageImageHandler.swift */; };
 		BF00078E28FFE460000189D4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00078D28FFE460000189D4 /* Extension.swift */; };
 		BF00079128FFE482000189D4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00079028FFE482000189D4 /* Constants.swift */; };
@@ -33,7 +32,6 @@
 /* Begin PBXFileReference section */
 		909D99C128F3DC8600E0D1C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		90A1AF1829064C0600995909 /* StorageModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageModule.swift; sourceTree = "<group>"; };
-		90A1AF1B29064C5C00995909 /* StorageImageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageImageHandler.swift; sourceTree = "<group>"; };
 		90A1AF2729065E0A00995909 /* StorageImageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StorageImageHandler.swift; path = PicSpot/Utility/StorageImageHandler.swift; sourceTree = SOURCE_ROOT; };
 		BF00078D28FFE460000189D4 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		BF00079028FFE482000189D4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -71,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				90A1AF2729065E0A00995909 /* StorageImageHandler.swift */,
-				90A1AF1B29064C5C00995909 /* StorageImageHandler.swift */,
 			);
 			name = Utility;
 			path = Models/Utility;
@@ -268,7 +265,6 @@
 				90A1AF2829065E0A00995909 /* StorageImageHandler.swift in Sources */,
 				BF51E9F428EE86F90011952E /* ClubViewController.swift in Sources */,
 				BF51E9CD28ED316C0011952E /* AppDelegate.swift in Sources */,
-				90A1AF1C29064C5C00995909 /* StorageImageHandler.swift in Sources */,
 				BF51E9F628EE87130011952E /* ProfileViewController.swift in Sources */,
 				BF51E9F228EE86E30011952E /* MapViewController.swift in Sources */,
 				BF51E9CF28ED316C0011952E /* SceneDelegate.swift in Sources */,
