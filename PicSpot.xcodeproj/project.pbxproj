@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		909D99C228F3DC8600E0D1C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 909D99C128F3DC8600E0D1C0 /* GoogleService-Info.plist */; };
+		9548296F290284BF003A5BAF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9548296E290284BF003A5BAF /* LogInViewController.swift */; };
 		BF00078E28FFE460000189D4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00078D28FFE460000189D4 /* Extension.swift */; };
 		BF00079128FFE482000189D4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00079028FFE482000189D4 /* Constants.swift */; };
 		BF00079728FFE489000189D4 /* PictureViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00079428FFE489000189D4 /* PictureViewCell.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		909D99C128F3DC8600E0D1C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9548296E290284BF003A5BAF /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		BF00078D28FFE460000189D4 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		BF00079028FFE482000189D4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BF00079428FFE489000189D4 /* PictureViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewCell.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				BF00079428FFE489000189D4 /* PictureViewCell.swift */,
 				BF00079528FFE489000189D4 /* InformationView.swift */,
 				BF00079628FFE489000189D4 /* MyPictureController.swift */,
+				9548296E290284BF003A5BAF /* LogInViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				BF51E9F428EE86F90011952E /* ClubViewController.swift in Sources */,
 				BF51E9CD28ED316C0011952E /* AppDelegate.swift in Sources */,
 				BF51E9F628EE87130011952E /* ProfileViewController.swift in Sources */,
+				9548296F290284BF003A5BAF /* LogInViewController.swift in Sources */,
 				BF51E9F228EE86E30011952E /* MapViewController.swift in Sources */,
 				BF51E9CF28ED316C0011952E /* SceneDelegate.swift in Sources */,
 				BF00079728FFE489000189D4 /* PictureViewCell.swift in Sources */,

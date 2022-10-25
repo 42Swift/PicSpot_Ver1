@@ -9,8 +9,9 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     let constants = Constants()
-
-    // MARK: Properties
+    // 임시 변수. 뷰 토글용
+    var logged = false
+    // MARK: - Properties
 
     lazy var alert: UIBarButtonItem = {
         let button = UIBarButtonItem(image: UIImage(systemName: "bell"),
@@ -25,6 +26,11 @@ class ProfileViewController: UIViewController {
         return picture
     }()
 
+    lazy var logInView: LogInViewController = {
+        let view = LogInViewController()
+        return view
+    }()
+
     init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -36,10 +42,12 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .mainGray
-
-        view.addSubview(pictureView.view)
-
-        navigationItem.rightBarButtonItem = alert
+        if logged {
+            view.addSubview(pictureView.view)
+            navigationItem.rightBarButtonItem = alert
+        } else {
+            view.addSubview(logInView.view)
+        }
     }
 
     @objc func handleAlert() {

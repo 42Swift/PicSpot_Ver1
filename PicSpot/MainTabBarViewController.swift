@@ -36,7 +36,7 @@ class MainTabBarViewController: UITabBarController {
 
         // 탭바 아이템 표시
         setViewControllers([vc1, vc2, vc3, vc4], animated: true)
-        self.selectedIndex = 0
+        self.selectedIndex = 3
 
     }
 
