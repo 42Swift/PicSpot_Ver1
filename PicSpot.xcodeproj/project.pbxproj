@@ -13,6 +13,7 @@
 		BF00079728FFE489000189D4 /* PictureViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00079428FFE489000189D4 /* PictureViewCell.swift */; };
 		BF00079828FFE489000189D4 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00079528FFE489000189D4 /* InformationView.swift */; };
 		BF00079928FFE489000189D4 /* MyPictureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00079628FFE489000189D4 /* MyPictureController.swift */; };
+		BF429AA42939BCA800D0A4C5 /* MapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF429AA32939BCA800D0A4C5 /* MapDetailViewController.swift */; };
 		BF51E5CC28F52EDD002609F7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BF51E5CB28F52EDD002609F7 /* FirebaseStorage */; };
 		BF51E5CF28F52F7D002609F7 /* NMapsMap in Frameworks */ = {isa = PBXBuildFile; productRef = BF51E5CE28F52F7D002609F7 /* NMapsMap */; };
 		BF51E9CD28ED316C0011952E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9CC28ED316C0011952E /* AppDelegate.swift */; };
@@ -34,6 +35,7 @@
 		BF00079428FFE489000189D4 /* PictureViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewCell.swift; sourceTree = "<group>"; };
 		BF00079528FFE489000189D4 /* InformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		BF00079628FFE489000189D4 /* MyPictureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPictureController.swift; sourceTree = "<group>"; };
+		BF429AA32939BCA800D0A4C5 /* MapDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailViewController.swift; sourceTree = "<group>"; };
 		BF51E9C928ED316C0011952E /* PicSpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicSpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF51E9CC28ED316C0011952E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF51E9CE28ED316C0011952E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,15 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		BF429AA52939C5EF00D0A4C5 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				BF51E9F128EE86E30011952E /* MapViewController.swift */,
+				BF429AA32939BCA800D0A4C5 /* MapDetailViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		BF51E9C028ED316C0011952E = {
 			isa = PBXGroup;
 			children = (
@@ -133,8 +144,8 @@
 		BF51E9EE28EE86BD0011952E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BF429AA52939C5EF00D0A4C5 /* Map */,
 				BF51E9EF28EE86CE0011952E /* SpotViewController.swift */,
-				BF51E9F128EE86E30011952E /* MapViewController.swift */,
 				BF51E9F328EE86F90011952E /* ClubViewController.swift */,
 				BF51E9F528EE87130011952E /* ProfileViewController.swift */,
 			);
@@ -245,6 +256,7 @@
 			files = (
 				BF51E9F028EE86CE0011952E /* SpotViewController.swift in Sources */,
 				BF00079828FFE489000189D4 /* InformationView.swift in Sources */,
+				BF429AA42939BCA800D0A4C5 /* MapDetailViewController.swift in Sources */,
 				BF51E9D128ED316C0011952E /* MainTabBarViewController.swift in Sources */,
 				BF51E9F428EE86F90011952E /* ClubViewController.swift in Sources */,
 				BF51E9CD28ED316C0011952E /* AppDelegate.swift in Sources */,
