@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		909D99C228F3DC8600E0D1C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 909D99C128F3DC8600E0D1C0 /* GoogleService-Info.plist */; };
+		90E8DE472939F17D009C41D6 /* StorageModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E8DE462939F17D009C41D6 /* StorageModule.swift */; };
+		90E8DE4A2939F1F1009C41D6 /* StorageImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E8DE492939F1F1009C41D6 /* StorageImageHandler.swift */; };
+		90E8DE4C2939F21E009C41D6 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E8DE4B2939F21E009C41D6 /* UploadViewController.swift */; };
 		9548296F290284BF003A5BAF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9548296E290284BF003A5BAF /* LogInViewController.swift */; };
 		9555658E2939C5600011AA31 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9555658D2939C5600011AA31 /* SettingViewController.swift */; };
 		BF00078E28FFE460000189D4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00078D28FFE460000189D4 /* Extension.swift */; };
@@ -32,6 +35,9 @@
 
 /* Begin PBXFileReference section */
 		909D99C128F3DC8600E0D1C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		90E8DE462939F17D009C41D6 /* StorageModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageModule.swift; sourceTree = "<group>"; };
+		90E8DE492939F1F1009C41D6 /* StorageImageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageImageHandler.swift; sourceTree = "<group>"; };
+		90E8DE4B2939F21E009C41D6 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		9548296E290284BF003A5BAF /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		9555658D2939C5600011AA31 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		BF00078D28FFE460000189D4 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -67,6 +73,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90E8DE482939F1C3009C41D6 /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				90E8DE492939F1F1009C41D6 /* StorageImageHandler.swift */,
+				90E8DE4B2939F21E009C41D6 /* UploadViewController.swift */,
+			);
+			path = Upload;
+			sourceTree = "<group>";
+		};
 		BF00078C28FFE460000189D4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				BF00079028FFE482000189D4 /* Constants.swift */,
+				90E8DE462939F17D009C41D6 /* StorageModule.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -86,6 +102,7 @@
 		BF00079228FFE489000189D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				90E8DE482939F1C3009C41D6 /* Upload */,
 				BF00079328FFE489000189D4 /* Profile */,
 			);
 			path = Views;
@@ -268,9 +285,12 @@
 				BF51E9CD28ED316C0011952E /* AppDelegate.swift in Sources */,
 				9555658E2939C5600011AA31 /* SettingViewController.swift in Sources */,
 				BF51E9F628EE87130011952E /* ProfileViewController.swift in Sources */,
+				90E8DE4A2939F1F1009C41D6 /* StorageImageHandler.swift in Sources */,
 				9548296F290284BF003A5BAF /* LogInViewController.swift in Sources */,
+				90E8DE472939F17D009C41D6 /* StorageModule.swift in Sources */,
 				BF51E9F228EE86E30011952E /* MapViewController.swift in Sources */,
 				BF51E9CF28ED316C0011952E /* SceneDelegate.swift in Sources */,
+				90E8DE4C2939F21E009C41D6 /* UploadViewController.swift in Sources */,
 				BF00079728FFE489000189D4 /* PictureViewCell.swift in Sources */,
 				BF00078E28FFE460000189D4 /* Extension.swift in Sources */,
 				BF00079928FFE489000189D4 /* MyPictureController.swift in Sources */,
