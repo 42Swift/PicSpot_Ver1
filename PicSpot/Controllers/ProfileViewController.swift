@@ -9,13 +9,14 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     let constants = Constants()
-    // 임시 변수. 뷰 토글용
-    var logged = false
+    // 임시 변수. 뷰 토글용. 후에 로그인 여부 판단 역할
+    var logged = true
     // MARK: - Properties
 
-    lazy var alert: UIBarButtonItem = {
-        let button = UIBarButtonItem(image: UIImage(systemName: "bell"),
-                                     style: .plain, target: self, action: #selector(handleAlert))
+    lazy var setting: UIBarButtonItem = {
+        let button = UIBarButtonItem(image: UIImage(systemName: "gearshape"),
+                                     style: .plain, target: self, action: #selector(handleSetting))
+        button.tintColor = .black
         return button
     }()
 
@@ -44,13 +45,16 @@ class ProfileViewController: UIViewController {
         view.backgroundColor = .mainGray
         if logged {
             view.addSubview(pictureView.view)
-            navigationItem.rightBarButtonItem = alert
+            navigationItem.rightBarButtonItem = setting
         } else {
             view.addSubview(logInView.view)
         }
     }
 
-    @objc func handleAlert() {
-        print("alert is clicked")
+    @objc func handleSetting() {
+        let rootVC = SettingViewController()
+        rootVC.title = "설정"
+        navigationController?.navigationBar.topItem?.backButtonTitle = "취소"
+        navigationController?.pushViewController(rootVC, animated: true)
     }
 }
