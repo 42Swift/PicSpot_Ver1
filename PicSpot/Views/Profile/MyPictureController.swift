@@ -13,12 +13,22 @@ private let headerID = "Header"
 class MyPictureController: UICollectionViewController {
 
     // MARK: Properties
-
-    let constants = Constants()
-    let images: [UIImage] = [#imageLiteral(resourceName: "camera-1024"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "batman"), #imageLiteral(resourceName: "suicide-squad"), #imageLiteral(resourceName: "camera-1024"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "batman"), #imageLiteral(resourceName: "suicide-squad"), #imageLiteral(resourceName: "camera-1024"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "batman"), #imageLiteral(resourceName: "suicide-squad"), #imageLiteral(resourceName: "camera-1024"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "batman"), #imageLiteral(resourceName: "suicide-squad"), #imageLiteral(resourceName: "camera-1024"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "batman"), #imageLiteral(resourceName: "suicide-squad"), #imageLiteral(resourceName: "camera-1024"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "batman"), #imageLiteral(resourceName: "suicide-squad") ]
+    let constants: Constants = Constants()
+    var whichImage: Bool = true {
+        didSet {
+            changeImage()
+        }
+    }
+    var images = [UIImage]()
+    let myImages: [UIImage] = [#imageLiteral(resourceName: "camera-1024"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "batman"), #imageLiteral(resourceName: "suicide-squad"), #imageLiteral(resourceName: "camera-1024"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "batman"), #imageLiteral(resourceName: "suicide-squad"), #imageLiteral(resourceName: "camera-1024"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "batman"), #imageLiteral(resourceName: "suicide-squad"), #imageLiteral(resourceName: "camera-1024"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "batman"), #imageLiteral(resourceName: "suicide-squad"), #imageLiteral(resourceName: "camera-1024"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "batman"), #imageLiteral(resourceName: "suicide-squad"), #imageLiteral(resourceName: "camera-1024"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "batman"), #imageLiteral(resourceName: "suicide-squad") ]
+    let favoriteImages: [UIImage] = [#imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.images = myImages
+
+        //        collectionView.reloadData()
+        collectionView.collectionViewLayout.invalidateLayout()
         collectionView.backgroundColor = .white
         // register header
         collectionView!.register(InformationView.self,
@@ -33,6 +43,15 @@ class MyPictureController: UICollectionViewController {
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+
+    func changeImage() {
+        if whichImage {
+            images = myImages
+        } else {
+            images = favoriteImages
+        }
+        collectionView.reloadData()
     }
 }
 
@@ -60,6 +79,7 @@ extension MyPictureController {
         cell!.image = images[indexPath.row]
         return cell!
     }
+
 }
 
 // MARK: UICollectionViewDelegateFlowLayout
