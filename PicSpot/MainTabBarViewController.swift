@@ -8,6 +8,12 @@
 import UIKit
 
 class MainTabBarViewController: UITabBarController {
+    enum ViewController: Int {
+        case spot = 0
+        case map = 1
+        case club = 2
+        case profile = 3
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +42,7 @@ class MainTabBarViewController: UITabBarController {
 
         // 탭바 아이템 표시
         setViewControllers([vc1, vc2, vc3, vc4], animated: true)
-        self.selectedIndex = 3
+        self.selectedIndex = ViewController.spot.rawValue
 
     }
 
