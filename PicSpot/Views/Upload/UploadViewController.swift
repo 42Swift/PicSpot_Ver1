@@ -7,6 +7,7 @@
 
 import UIKit
 import PhotosUI
+import NMapsMap
 
 class UploadViewController: UIViewController {
     private let deviceWidth = Constants().screenWidth
@@ -43,13 +44,10 @@ class UploadViewController: UIViewController {
         imageView.tintColor = .systemRed
         return imageView
     }()
-    lazy var mapView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .systemCyan
-        return view
-    }()
+    private let naverMap = NMFNaverMapView()
     override func viewDidLoad() {
         super.viewDidLoad()
+        phpicker()
         view.backgroundColor = .white
         self.navigationItem.leftBarButtonItem = leftItem
         self.navigationItem.rightBarButtonItem = rightItem
@@ -69,12 +67,13 @@ class UploadViewController: UIViewController {
         view.addSubview(map)
         map.anchor(top: imageButton.bottomAnchor, left: view.leftAnchor,
                    paddingTop: 40, paddingLeft: 20, width: 40, height: 40)
-        view.addSubview(mapView)
-        mapView.anchor(top: map.bottomAnchor, left: view.leftAnchor,
+    }
+    func generateMap() {
+        self.view.addSubview(naverMap)
+        naverMap.anchor(top: map.bottomAnchor, left: view.leftAnchor,
                        right: view.rightAnchor, paddingTop: 25, paddingLeft: 25,
                        paddingRight: 25, width: deviceWidth, height: deviceWidth)
     }
-
     @objc func phpicker() {
         var configuration = PHPickerConfiguration(photoLibrary: PHPhotoLibrary.shared())
         configuration.selectionLimit = 1
@@ -112,8 +111,6 @@ extension UploadViewController: PHPickerViewControllerDelegate {
                 }
                 let formatter = DateFormatter()
                 formatter.dateFormat = "MM. dd.  yyyy\nH : mm"
-                print(formatter.string(from: creationDate))
-                print(coordinate)
                 if results[0].itemProvider.canLoadObject(ofClass: UIImage.self) {
                     results[0].itemProvider.loadObject(ofClass: UIImage.self) { image, error in
                         if let error = error {
@@ -121,9 +118,15 @@ extension UploadViewController: PHPickerViewControllerDelegate {
                             return
                         } else {
                             DispatchQueue.main.async {
+                                let imagePosition = NMGLatLng(lat: coordinate.latitude, lng: coordinate.longitude)
+                                let updatePosition = NMFCameraPosition(imagePosition, zoom: 16)
+                                let marker = NMFMarker(position: imagePosition)
+                                marker.mapView = self.naverMap.mapView
+                                self.naverMap.mapView.moveCamera(NMFCameraUpdate(position: updatePosition))
                                 self.imageSelect = true
                                 self.creationDate.text = formatter.string(from: creationDate)
                                 self.imageButton.setImage(image as? UIImage, for: .normal)
+                                self.generateMap()
                             }
                         }
                     }
