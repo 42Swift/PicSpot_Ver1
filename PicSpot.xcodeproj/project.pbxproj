@@ -31,6 +31,7 @@
 		BF51E9F228EE86E30011952E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9F128EE86E30011952E /* MapViewController.swift */; };
 		BF51E9F428EE86F90011952E /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9F328EE86F90011952E /* ClubViewController.swift */; };
 		BF51E9F628EE87130011952E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9F528EE87130011952E /* ProfileViewController.swift */; };
+		BF83D29A293DBA4200D2ABB0 /* MapDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83D299293DBA4200D2ABB0 /* MapDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		BF51E9F128EE86E30011952E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BF51E9F328EE86F90011952E /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
 		BF51E9F528EE87130011952E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BF83D299293DBA4200D2ABB0 /* MapDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		BF00079228FFE489000189D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF83D298293DB75600D2ABB0 /* Map */,
 				90E8DE482939F1C3009C41D6 /* Upload */,
 				BF00079328FFE489000189D4 /* Profile */,
 			);
@@ -173,6 +176,14 @@
 				BF51E9F528EE87130011952E /* ProfileViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BF83D298293DB75600D2ABB0 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				BF83D299293DBA4200D2ABB0 /* MapDetailView.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +296,7 @@
 				BF51E9CD28ED316C0011952E /* AppDelegate.swift in Sources */,
 				9555658E2939C5600011AA31 /* SettingViewController.swift in Sources */,
 				BF51E9F628EE87130011952E /* ProfileViewController.swift in Sources */,
+				BF83D29A293DBA4200D2ABB0 /* MapDetailView.swift in Sources */,
 				90E8DE4A2939F1F1009C41D6 /* StorageImageHandler.swift in Sources */,
 				9548296F290284BF003A5BAF /* LogInViewController.swift in Sources */,
 				90E8DE472939F17D009C41D6 /* StorageModule.swift in Sources */,
