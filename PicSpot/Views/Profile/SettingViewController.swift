@@ -9,6 +9,8 @@ import UIKit
 
 class SettingViewController: UIViewController, UITextFieldDelegate {
 
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+
     lazy var save: UIBarButtonItem = {
         let button = UIBarButtonItem(title: "저장",
                                      style: .plain, target: self, action: #selector(handleSave))
@@ -35,7 +37,7 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
         let textField = UITextField(frame: CGRect(x: posX, y: posY, width: width, height: height))
 
         // Substitute the characters to be displayed.
-        textField.text = "Jaewpark"
+        textField.text = appDelegate?.testUser.name
         // Set Delegate to itself
         textField.delegate = self
         // Display frame.
@@ -93,6 +95,9 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
     @objc func handleSave() {
         // user.name = textField.text 같이 속성 바꿔줄 것.
         // user의 속성 자체를 바꾸기 때문에 부모뷰랑 변수 공유할 필요 없음
-        self.navigationController?.popViewController(animated: true)
+        if textField.text?.isEmpty == false {
+            appDelegate?.testUser.name = textField.text!
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }

@@ -10,10 +10,12 @@ import UIKit
 class InformationView: UICollectionReusableView {
     // MARK: - Properties
 
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+
     lazy var name: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.text = "Jaewpark"
+        label.text = appDelegate?.testUser.name
         label.textColor = .black
         return label
     }()

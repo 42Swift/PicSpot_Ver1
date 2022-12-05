@@ -20,8 +20,8 @@ class ProfileViewController: UIViewController {
         return button
     }()
 
-    lazy var pictureView: MyPictureController = {
-        let picture = MyPictureController(collectionViewLayout: UICollectionViewFlowLayout())
+    lazy var myPictureView: MyPictureViewController = {
+        let picture = MyPictureViewController(collectionViewLayout: UICollectionViewFlowLayout())
         picture.view.frame = CGRect(x: 0, y: 0, width: constants.screenWidth,
                                     height: constants.screenHeight)
         return picture
@@ -44,11 +44,15 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .mainGray
         if logged {
-            view.addSubview(pictureView.view)
+            view.addSubview(myPictureView.view)
             navigationItem.rightBarButtonItem = setting
         } else {
             view.addSubview(logInView.view)
         }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        myPictureView.viewWillAppear(false)
     }
 
     @objc func handleSetting() {
@@ -56,5 +60,6 @@ class ProfileViewController: UIViewController {
         rootVC.title = "설정"
         navigationController?.navigationBar.topItem?.backButtonTitle = "취소"
         navigationController?.pushViewController(rootVC, animated: true)
+        viewWillAppear(false)
     }
 }
