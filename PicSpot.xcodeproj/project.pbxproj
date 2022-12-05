@@ -13,11 +13,12 @@
 		90E8DE4C2939F21E009C41D6 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E8DE4B2939F21E009C41D6 /* UploadViewController.swift */; };
 		9548296F290284BF003A5BAF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9548296E290284BF003A5BAF /* LogInViewController.swift */; };
 		9555658E2939C5600011AA31 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9555658D2939C5600011AA31 /* SettingViewController.swift */; };
+		95FC97DC293DBCD200992C4E /* TestUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FC97DB293DBCD200992C4E /* TestUser.swift */; };
 		BF00078E28FFE460000189D4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00078D28FFE460000189D4 /* Extension.swift */; };
 		BF00079128FFE482000189D4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00079028FFE482000189D4 /* Constants.swift */; };
 		BF00079728FFE489000189D4 /* PictureViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00079428FFE489000189D4 /* PictureViewCell.swift */; };
 		BF00079828FFE489000189D4 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00079528FFE489000189D4 /* InformationView.swift */; };
-		BF00079928FFE489000189D4 /* MyPictureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00079628FFE489000189D4 /* MyPictureController.swift */; };
+		BF00079928FFE489000189D4 /* MyPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00079628FFE489000189D4 /* MyPictureViewController.swift */; };
 		BF429AA42939BCA800D0A4C5 /* MapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF429AA32939BCA800D0A4C5 /* MapDetailViewController.swift */; };
 		BF51E5CC28F52EDD002609F7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BF51E5CB28F52EDD002609F7 /* FirebaseStorage */; };
 		BF51E5CF28F52F7D002609F7 /* NMapsMap in Frameworks */ = {isa = PBXBuildFile; productRef = BF51E5CE28F52F7D002609F7 /* NMapsMap */; };
@@ -41,11 +42,12 @@
 		90E8DE4B2939F21E009C41D6 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		9548296E290284BF003A5BAF /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		9555658D2939C5600011AA31 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		95FC97DB293DBCD200992C4E /* TestUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUser.swift; sourceTree = "<group>"; };
 		BF00078D28FFE460000189D4 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		BF00079028FFE482000189D4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BF00079428FFE489000189D4 /* PictureViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewCell.swift; sourceTree = "<group>"; };
 		BF00079528FFE489000189D4 /* InformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
-		BF00079628FFE489000189D4 /* MyPictureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPictureController.swift; sourceTree = "<group>"; };
+		BF00079628FFE489000189D4 /* MyPictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPictureViewController.swift; sourceTree = "<group>"; };
 		BF429AA32939BCA800D0A4C5 /* MapDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailViewController.swift; sourceTree = "<group>"; };
 		BF51E9C928ED316C0011952E /* PicSpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicSpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF51E9CC28ED316C0011952E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				BF00079028FFE482000189D4 /* Constants.swift */,
 				90E8DE462939F17D009C41D6 /* StorageModule.swift */,
+				95FC97DB293DBCD200992C4E /* TestUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -116,7 +119,7 @@
 			children = (
 				BF00079428FFE489000189D4 /* PictureViewCell.swift */,
 				BF00079528FFE489000189D4 /* InformationView.swift */,
-				BF00079628FFE489000189D4 /* MyPictureController.swift */,
+				BF00079628FFE489000189D4 /* MyPictureViewController.swift */,
 				9548296E290284BF003A5BAF /* LogInViewController.swift */,
 				9555658D2939C5600011AA31 /* SettingViewController.swift */,
 			);
@@ -289,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF51E9F028EE86CE0011952E /* SpotViewController.swift in Sources */,
+				95FC97DC293DBCD200992C4E /* TestUser.swift in Sources */,
 				BF00079828FFE489000189D4 /* InformationView.swift in Sources */,
 				BF429AA42939BCA800D0A4C5 /* MapDetailViewController.swift in Sources */,
 				BF51E9D128ED316C0011952E /* MainTabBarViewController.swift in Sources */,
@@ -305,7 +309,7 @@
 				90E8DE4C2939F21E009C41D6 /* UploadViewController.swift in Sources */,
 				BF00079728FFE489000189D4 /* PictureViewCell.swift in Sources */,
 				BF00078E28FFE460000189D4 /* Extension.swift in Sources */,
-				BF00079928FFE489000189D4 /* MyPictureController.swift in Sources */,
+				BF00079928FFE489000189D4 /* MyPictureViewController.swift in Sources */,
 				BF00079128FFE482000189D4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

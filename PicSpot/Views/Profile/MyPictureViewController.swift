@@ -10,24 +10,19 @@ import UIKit
 private let cellID = "Cell"
 private let headerID = "Header"
 
-class MyPictureController: UICollectionViewController {
+class MyPictureViewController: UICollectionViewController {
 
     // MARK: Properties
     let constants: Constants = Constants()
-    var whichImage: Bool = true {
-        didSet {
-            changeImage()
-        }
-    }
     var images = [UIImage]()
     let myImages: [UIImage] = [#imageLiteral(resourceName: "camera-1024"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "batman"), #imageLiteral(resourceName: "suicide-squad"), #imageLiteral(resourceName: "camera-1024"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "batman"), #imageLiteral(resourceName: "suicide-squad"), #imageLiteral(resourceName: "camera-1024"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "batman"), #imageLiteral(resourceName: "suicide-squad"), #imageLiteral(resourceName: "camera-1024"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "batman"), #imageLiteral(resourceName: "suicide-squad"), #imageLiteral(resourceName: "camera-1024"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "batman"), #imageLiteral(resourceName: "suicide-squad"), #imageLiteral(resourceName: "camera-1024"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "batman"), #imageLiteral(resourceName: "suicide-squad") ]
-    let favoriteImages: [UIImage] = [#imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man"), #imageLiteral(resourceName: "spider-man")]
+    var informationView: InformationView?
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.images = myImages
 
-        //        collectionView.reloadData()
         collectionView.collectionViewLayout.invalidateLayout()
         collectionView.backgroundColor = .white
         // register header
@@ -41,30 +36,25 @@ class MyPictureController: UICollectionViewController {
 
     }
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+    override func viewWillAppear(_ animated: Bool) {
+        informationView?.name.text = appDelegate?.testUser.name
     }
 
-    func changeImage() {
-        if whichImage {
-            images = myImages
-        } else {
-            images = favoriteImages
-        }
-        collectionView.reloadData()
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 
 // MARK: UICollectionViewDelegate/DataSource
-extension MyPictureController {
+extension MyPictureViewController {
     override func collectionView(_ collectionView: UICollectionView,
                                  viewForSupplementaryElementOfKind kind: String,
                                  at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView
+        self.informationView = collectionView
             .dequeueReusableSupplementaryView(ofKind: kind,
                                               withReuseIdentifier: headerID,
                                               for: indexPath) as? InformationView
-        return header!
+        return self.informationView!
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -84,7 +74,7 @@ extension MyPictureController {
 
 // MARK: UICollectionViewDelegateFlowLayout
 
-extension MyPictureController: UICollectionViewDelegateFlowLayout {
+extension MyPictureViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
                         referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.width, height: constants.informationHeight)
