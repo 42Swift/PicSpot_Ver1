@@ -47,7 +47,6 @@ class UploadViewController: UIViewController {
     private let naverMap = NMFNaverMapView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        phpicker()
         view.backgroundColor = .white
         self.navigationItem.leftBarButtonItem = leftItem
         self.navigationItem.rightBarButtonItem = rightItem

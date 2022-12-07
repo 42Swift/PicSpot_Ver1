@@ -57,13 +57,23 @@ class MapViewController: UIViewController {
     var mapView: NMFMapView {
         return naverMapView.mapView
     }
-
+    lazy var uploadSpot: UIButton = {
+        let button = UIButton(type: .system)
+        let largeConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .bold, scale: .large)
+        let sfSymbol = UIImage(systemName: "plus.circle.fill", withConfiguration: largeConfig)
+        button.setImage(sfSymbol, for: .normal)
+        button.tintColor = .white
+        return button
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         // 네이버 지도를 표시
         showNaverMap()
         // 지도에 사진을 표시
         showPicturesOnMap()
+        view.addSubview(uploadSpot)
+        uploadSpot.addTarget(self, action: #selector(moveUploadSpot), for: .touchUpInside)
+        uploadSpot.anchor(bottom: view.bottomAnchor, right: view.rightAnchor, paddingBottom: 110, paddingRight: 10)
     }
 
     // MapViewController에 네이버지도를 표시
@@ -138,5 +148,11 @@ class MapViewController: UIViewController {
         }
 
     }
-
+    @objc func moveUploadSpot() {
+        let rootVC = UploadViewController()
+        rootVC.title = "새 게시물"
+        let naviVC = UINavigationController(rootViewController: rootVC)
+        naviVC.modalPresentationStyle = .fullScreen
+        self.present(naviVC, animated: true)
+    }
 }
