@@ -460,6 +460,7 @@
 				DEVELOPMENT_TEAM = DD8VYBJ73D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PicSpot/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진을 사용합니다";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -491,6 +492,7 @@
 				DEVELOPMENT_TEAM = DD8VYBJ73D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PicSpot/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진을 사용합니다";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
