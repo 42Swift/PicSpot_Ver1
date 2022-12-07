@@ -80,10 +80,27 @@
 		90E8DE482939F1C3009C41D6 /* Upload */ = {
 			isa = PBXGroup;
 			children = (
-				90E8DE492939F1F1009C41D6 /* StorageImageHandler.swift */,
 				90E8DE4B2939F21E009C41D6 /* UploadViewController.swift */,
 			);
 			path = Upload;
+			sourceTree = "<group>";
+		};
+		95F176CD29405F6E0060FE81 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9548296E290284BF003A5BAF /* LogInViewController.swift */,
+				9555658D2939C5600011AA31 /* SettingViewController.swift */,
+				BF00079628FFE489000189D4 /* MyPictureViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		95F176CE294060290060FE81 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				90E8DE492939F1F1009C41D6 /* StorageImageHandler.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		BF00078C28FFE460000189D4 /* Extensions */ = {
@@ -108,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				BF83D298293DB75600D2ABB0 /* Map */,
-				90E8DE482939F1C3009C41D6 /* Upload */,
 				BF00079328FFE489000189D4 /* Profile */,
 			);
 			path = Views;
@@ -119,9 +135,6 @@
 			children = (
 				BF00079428FFE489000189D4 /* PictureViewCell.swift */,
 				BF00079528FFE489000189D4 /* InformationView.swift */,
-				BF00079628FFE489000189D4 /* MyPictureViewController.swift */,
-				9548296E290284BF003A5BAF /* LogInViewController.swift */,
-				9555658D2939C5600011AA31 /* SettingViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -156,8 +169,8 @@
 			children = (
 				BF51E9CC28ED316C0011952E /* AppDelegate.swift */,
 				BF51E9CE28ED316C0011952E /* SceneDelegate.swift */,
-				BF51E9D028ED316C0011952E /* MainTabBarViewController.swift */,
 				BF00078F28FFE482000189D4 /* Models */,
+				95F176CE294060290060FE81 /* Utils */,
 				BF00079228FFE489000189D4 /* Views */,
 				BF51E9EE28EE86BD0011952E /* Controllers */,
 				BF00078C28FFE460000189D4 /* Extensions */,
@@ -173,6 +186,9 @@
 		BF51E9EE28EE86BD0011952E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BF51E9D028ED316C0011952E /* MainTabBarViewController.swift */,
+				90E8DE482939F1C3009C41D6 /* Upload */,
+				95F176CD29405F6E0060FE81 /* Profile */,
 				BF429AA52939C5EF00D0A4C5 /* Map */,
 				BF51E9EF28EE86CE0011952E /* SpotViewController.swift */,
 				BF51E9F328EE86F90011952E /* ClubViewController.swift */,
