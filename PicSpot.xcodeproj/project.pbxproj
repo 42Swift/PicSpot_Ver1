@@ -30,7 +30,6 @@
 		BF51E9D928ED316D0011952E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF51E9D728ED316D0011952E /* LaunchScreen.storyboard */; };
 		BF51E9F028EE86CE0011952E /* SpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9EF28EE86CE0011952E /* SpotViewController.swift */; };
 		BF51E9F228EE86E30011952E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9F128EE86E30011952E /* MapViewController.swift */; };
-		BF51E9F428EE86F90011952E /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9F328EE86F90011952E /* ClubViewController.swift */; };
 		BF51E9F628EE87130011952E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51E9F528EE87130011952E /* ProfileViewController.swift */; };
 		BF83D29A293DBA4200D2ABB0 /* MapDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83D299293DBA4200D2ABB0 /* MapDetailView.swift */; };
 /* End PBXBuildFile section */
@@ -59,7 +58,6 @@
 		BF51E9DA28ED316D0011952E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF51E9EF28EE86CE0011952E /* SpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotViewController.swift; sourceTree = "<group>"; };
 		BF51E9F128EE86E30011952E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		BF51E9F328EE86F90011952E /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
 		BF51E9F528EE87130011952E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BF83D299293DBA4200D2ABB0 /* MapDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,7 +189,6 @@
 				95F176CD29405F6E0060FE81 /* Profile */,
 				BF429AA52939C5EF00D0A4C5 /* Map */,
 				BF51E9EF28EE86CE0011952E /* SpotViewController.swift */,
-				BF51E9F328EE86F90011952E /* ClubViewController.swift */,
 				BF51E9F528EE87130011952E /* ProfileViewController.swift */,
 			);
 			path = Controllers;
@@ -312,7 +309,6 @@
 				BF00079828FFE489000189D4 /* InformationView.swift in Sources */,
 				BF429AA42939BCA800D0A4C5 /* MapDetailViewController.swift in Sources */,
 				BF51E9D128ED316C0011952E /* MainTabBarViewController.swift in Sources */,
-				BF51E9F428EE86F90011952E /* ClubViewController.swift in Sources */,
 				BF51E9CD28ED316C0011952E /* AppDelegate.swift in Sources */,
 				9555658E2939C5600011AA31 /* SettingViewController.swift in Sources */,
 				BF51E9F628EE87130011952E /* ProfileViewController.swift in Sources */,
